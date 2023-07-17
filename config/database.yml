@@ -79,8 +79,6 @@ development:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
-#production:
-# <<: *default
-# database: Crazy4Cats_production
-# username: Crazy4Cats
-# password: <%= ENV["CRAZY4CATS_DATABASE_PASSWORD"] %>
+production:
+ <<: *default
+ url: <% ENV['DATABASE_URL']%>
