@@ -1,0 +1,19 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Posts</h1>
+<%= link_to "New post", new_post_path %>
+<div id="posts">
+  <% @posts.each do |post| %>
+    <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <%= render post %>
+      <%= link_to "Show this post", post, class:"card-link"%>
+      </div>
+  <% end %>
+</div>
+
+
+
+
+    
+   
